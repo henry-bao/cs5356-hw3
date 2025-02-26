@@ -3,13 +3,97 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Home</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
+        <title>Henry Bao | Software Developer</title>
 
+        <!-- Meta tags for link previews -->
+        <meta property="og:title" content="Henry Bao | Software Developerr" />
+        <meta
+            property="og:description"
+            content="Software developer by day; enthusiast of custom mechanical keyboards, vintage Polaroid cameras, and self-hosted technologies by night."
+        />
+        <meta
+            property="og:image"
+            content="https://cdnjs.cloudflare.com/ajax/libs/placeholder-images/0.0.1/400x300/abstract.png"
+        />
+        <meta property="og:url" content="https://henry-bao.github.io/cs5356-hw3" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
     <body>
-        <h1>hello world</h1>
-        <script src="index.js"></script>
+        <!-- Mouse follower element -->
+        <div class="cursor-follower"></div>
+
+        <div class="container">
+            <header>
+                <div class="logo">Henry Bao</div>
+                <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            </header>
+
+            <main>
+                <div class="main-content">
+                    <section class="profile">
+                        <img src="henry.jpg" alt="Henry Bao profile picture" class="profile-image" />
+                        <p>Software Developer</p>
+                    </section>
+
+                    <section class="bio">
+                        <h1>Hello, I'm Henry!!</h1>
+                        <p>
+                            Software developer by day; enthusiast of custom mechanical keyboards, vintage Polaroid
+                            cameras, and self-hosted technologies by night. Consistently exploring and learning new
+                            information technologies, driven by a strong academic background and diverse experiences to
+                            excel in roles centered on information and data.
+                        </p>
+
+                        <p>🌐 Website: henry.bao.nyc</p>
+                        <p>📧 Email: henry@bao.nyc</p>
+                        <p>📝 Resume: resume.bao.nyc</p>
+
+                        <!-- Using <details> element, which wasn't covered in class -->
+                        <details>
+                            <summary>My Skills</summary>
+                            <div class="skills-container">
+                                <div class="skill">HTML5</div>
+                                <div class="skill">CSS3</div>
+                                <div class="skill">JavaScript</div>
+                                <div class="skill">React</div>
+                                <div class="skill">Node.js</div>
+                                <div class="skill">UI/UX</div>
+                                <div class="skill">Responsive Design</div>
+                                <div class="skill">Git</div>
+                            </div>
+                            <p>
+                                I used the <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements here,
+                                which provide native HTML disclosure functionality. These elements create an
+                                expandable/collapsible section without requiring any JavaScript!
+                            </p>
+                            <p>
+                                For styling, I used the CSS <code>mix-blend-mode</code> property for the cursor
+                                follower, which determines how an element's content blends with the content behind it.
+                                The 'difference' value inverts the colors underneath, creating a dynamic effect as you
+                                move your mouse around the page.
+                            </p>
+                        </details>
+
+                        <p>Last portfolio update: <time datetime="2025-02-26">February 26, 2025</time></p>
+                    </section>
+                </div>
+            </main>
+
+            <section class="joke-section">
+                <h2>Need a joke to brighten your day?</h2>
+                <div class="joke-card">
+                    <p class="joke-setup" id="joke-setup">Click the button below to get a joke!</p>
+                    <p class="joke-delivery" id="joke-delivery"></p>
+                </div>
+                <button id="joke-btn">Get New Joke</button>
+            </section>
+
+            <footer>
+                <p>&copy; Henry Bao, it's 2025</p>
+            </footer>
+        </div>
+
+        <script src="scripts.js"></script>
     </body>
 </html>
